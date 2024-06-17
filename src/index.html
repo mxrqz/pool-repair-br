@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="./images/Logo_Pool_Repair_2.png" />
+    <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/franken-ui-releases@0.0.13/dist/default.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.21.5/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.21.5/dist/js/uikit-icons.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="https://unpkg.com/dayjs@1.11.11/plugin/relativeTime.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/locale/pt-br.js"></script>
+    <script>dayjs.extend(window.dayjs_plugin_relativeTime); dayjs.locale('pt-br')</script>
+    <title>Pool Revive Experts</title>
+</head>
+
+<body>
+    <nav class="sticky w-full top-0 bg-white/70 backdrop-blur z-20 shadow-lg overflow-x-hidden">
+        <div class="px-10 lg:px-32 2xl:px-96 py-5 lg:flex justify-between gap-10 items-center">
+            <a href="#banner" class="w-3/4 hidden lg:inline-block">
+                <img src="./images/Logo_Pool_Repair_Text.png" alt="Logo Pool Repair Experts"
+                    title="Logo Pool Repair Experts" class="w-3/4" />
+            </a>
+
+            <ul class="hidden lg:flex items-center gap-5">
+                <li class="relative hover:bg-black/10 p-3 rounded-2xl cursor-pointer min-w-max">
+                    <a href="#about-us" class="flex gap-2">
+                        Sobre Nós
+                    </a>
+                </li>
+
+                <li class="relative group hover:bg-black/10 p-3 rounded-2xl cursor-pointer"><a
+                        href="#services">Serviços</a></li>
+                <li class="relative hover:bg-black/10 p-3 rounded-2xl cursor-pointer"><a href="#reviews">Avaliações</a>
+                </li>
+                <li class="relative hover:bg-black/10 p-3 rounded-2xl cursor-pointer"><a href="#faqs">Perguntas</a>
+                </li>
+                <li class="relative hover:bg-black/10 p-3 rounded-2xl cursor-pointer"><a href="#contact">Contato</a>
+                </li>
+            </ul>
+
+            <button
+                class="text-white rounded-md hidden lg:inline bg-orange-500 hover:bg-orange-600 px-10 h-12 text-center animate-scale shadow-md items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50">
+                Faça um orçamento
+            </button>
+
+            <div class="text-black z-10 flex lg:hidden justify-between items-center relative">
+                <a href="#banner">
+                    <img src="./images/Logo_Pool_Repair_Text.png" alt="Logo Pool Repair" title="Logo Pool Repair"
+                        class="h-12" />
+                </a>
+                <svg id="hamburger1" xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24"
+                    fill="none" onclick="hamburguerMenu()" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" class="lucide lucide-menu z-[1]">
+                    <line x1="4" x2="20" y1="12" y2="12"></line>
+                    <line x1="4" x2="20" y1="6" y2="6"></line>
+                    <line x1="4" x2="20" y1="18" y2="18"></line>
+                </svg>
+            </div>
+        </div>
+
+        <div
+            class="hidden lg:inline-block px-10 lg:px-32 2xl:px-96 py-1 w-full h-fit bg-blue-900 text-white text-center">
+            <ul class="flex gap-5 p-2 justify-between">
+                <li><a href="#repair" class="hover:bg-blue-100/30 p-2 rounded-lg">Reparo</a></li>
+                <li><a href="#cleaning" class="hover:bg-blue-100/30 p-2 rounded-lg">Limpeza</a></li>
+                <li><a href="#pump" class="hover:bg-blue-100/30 p-2 rounded-lg">Substituição de Bomba</a></li>
+                <li><a href="#safety" class="hover:bg-blue-100/30 p-2 rounded-lg">Cercamento de Piscina</a></li>
+                <li><a href="#tile" class="hover:bg-blue-100/30 p-2 rounded-lg">Reparo de Azulejo</a></li>
+                <li><a href="#algae" class="hover:bg-blue-100/30 p-2 rounded-lg">Controle de Algas</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="menu" class="text-white w-full h-screen z-20 lg:hidden fixed bg-black left-0 top-0 translate-x-full transition-all px-10 lg:px-32 2xl:px-96 py-5 lg:flex justify-between
+        gap-10 items-center">
+
+        <div class="z-10 flex lg:hidden justify-between items-center relative">
+            <a href="#banner">
+                <img src="./images/Logo_Pool_Repair_Text.png" alt="Logo Pool Repair" title="Logo Pool Repair"
+                    class="h-12" />
+            </a>
+
+            <svg id="hamburger2" xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24"
+                fill="none" onclick="hamburguerMenu()" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" class="lucide lucide-menu z-[1]">
+                <line x1="4" x2="20" y1="12" y2="12"></line>
+                <line x1="4" x2="20" y1="6" y2="6"></line>
+                <line x1="4" x2="20" y1="18" y2="18"></line>
+            </svg>
+        </div>
+
+        <ul class="flex flex-col sm:flex-row lg:hidden h-full px-10 justify-center sm:items-center gap-5 text-3xl">
+            <li class="relative min-w-max border-r pr-3" onclick="hamburguerMenu()"><a href="#about-us">Sobre Nós</a>
+            </li>
+            <li class="relative border-r pr-3" onclick="hamburguerMenu()"><a href="#services">Serviços</a>
+            </li>
+            <li class="relative border-r pr-3" onclick="hamburguerMenu()"><a href="#reviews">Avaliações</a>
+            </li>
+            <li class="relative border-r pr-3" onclick="hamburguerMenu()"><a href="#faqs">Perguntas</a>
+            </li>
+            <li class="relative border-r pr-3" onclick="hamburguerMenu()"><a href="#contact">Contato</a>
+            </li>
+        </ul>
+    </div>
+
+    <main class="flex flex-col relative">
+        <div id="banner"
+            class="py-10 relative overflow-hidden flex flex-col items-center justify-center px-10 lg:px-32 2xl:px-96">
+            <div class="w-full h-full absolute left-0 bottom-0">
+                <img src="./images/joe-ciciarelli-08AJKJf75kw-unsplash.jpg" alt="pool image 01" title="pool image 01"
+                    class="h-full w-full object-cover" />
+            </div>
+
+            <div
+                class="relative text-white w-full flex flex-col-reverse sm:flex-row md:flex-row lg:flex-row gap-5 justify-between items-center z-[1]">
+                <div class="flex flex-col lg:w-2/3">
+                    <h1 class="text-3xl lg:text-5xl font-bold">Mergulhe em Serviços de Reparo de Qualidade</h1>
+                    <span class="text-xl lg:text-2xl">
+                        Não deixe os problemas da piscina te afundarem – temos a
+                        solução para te manter à tona.
+                    </span>
+                </div>
+
+                <div
+                    class="flex-col w-36 lg:w-96 gap-5 font-semibold text-2xl text-left hidden lg:flex md:flex sm:flex">
+                    <img src="./images/Logo_Pool_Repair_3.png" alt="Logo Pool Repair Experts"
+                        title="Logo Pool Repair Experts" />
+                </div>
+            </div>
+
+            <div class="w-full h-full bg-gradient-to-r from-blue-900/70 to-white/10 absolute left-0 z-0"></div>
+
+        </div>
+
+        <div
+            class="z-10 py-2 w-full h-fit sticky lg:relative md:sticky sm:sticky top-[88px] lg:top-0 left-0 flex items-center justify-center gap-5 text-xl lg:text-3xl bg-blue-900 px-5 lg:px-32 2xl:px-96">
+            <span class="text-white text-nowrap text-lg">Seu orçamento no mesmo dia!</span>
+            <button
+                class="p-2 w-fit h-fit bg-green-500 hover:bg-green-600 text-white text-base lg:text-2xl animate-shake lg:animation-pause inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50">
+                Fale Conosco
+            </button>
+        </div>
+
+        <div id="about-us" class="py-24 flex flex-col gap-10 px-10 lg:px-32 2xl:px-96">
+            <div class="flex flex-col gap-1">
+                <h2 class="text-3xl font-bold text-center">Especialista em Restauração de Piscinas</h2>
+                <p class="text-xl text-justify lg:text-center md:text-center sm:text-center">
+                    Sobre nossa empresa de limpeza, manutenção, construção e reparo de piscinas:
+                    Somos especializados em Construção de Piscinas, Manutenção de Piscinas, Renovação e Remodelação de
+                    Piscinas, bem como Design e Consultoria de Piscinas.
+                </p>
+            </div>
+
+            <div
+                class="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-2 items-center h-fit justify-center gap-5 rounded-2xl shadow-custom">
+                <div class="w-full h-full min-h-44 rounded-2xl overflow-hidden flex items-center">
+                    <img src="./images/conner-baker-wv4Pu-Jjdbw-unsplash.jpg" alt="Woman smiling in the pool"
+                        title="Woman smiling in the pool" class="w-full h-full object-cover" />
+                </div>
+
+                <div class="w-full h-full flex flex-col gap-5 rounded-lg p-5">
+                    <div class="flex flex-col">
+                        <span class="text-2xl font-semibold">Pool Revive Experts</span>
+                        <span class="text-xl font-semibold text-justify">Serviços Confiáveis de Reparo e Manutenção
+                            de Piscinas</span>
+                    </div>
+
+                    <p class="text-xl text-justify">
+                        Na Pool Revive Experts, passamos décadas aperfeiçoando nosso ofício e construindo uma reputação
+                        de excelência em reparo e manutenção de piscinas.
+                        Com mais de 20 anos de experiência na indústria, já vimos de tudo - desde pequenos vazamentos
+                        até grandes renovações.
+                        <span class="inline md:hidden sm:hidden">E durante todo esse tempo, permanecemos
+                            comprometidos em fornecer um serviço de primeira linha que excede as expectativas de nossos
+                            clientes.</span>
+                    </p>
+
+                    <ul class="grid-cols-2 text-md gap-5 justify-between hidden lg:grid">
+                        <li class="w-full">✅ Tempo de Resposta Rápido para Reparos de Emergência</li>
+                        <li class="w-full">✅ Técnicos Confiáveis em Quem Você Pode Confiar</li>
+                        <li class="w-full">✅ Soluções Personalizadas para Suas Necessidades de Piscina</li>
+                        <li class="w-full">✅ Garantias de Serviço Eficientes</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+        <div
+            class="relative w-full flex flex-col lg:flex-row md:flex-row sm:flex-col-reverse gap-5 justify-between items-center bg-gradient-to-br from-blue-500 to-[#4218B8] py-24 text-white px-10 lg:px-32 2xl:px-96">
+            <div class="w-full absolute bottom-0 left-0 overflow-hidden rotate-180">
+                <svg class="relative block w-[calc(147%+1.3px)] h-[57px]" data-name="Layer 1"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path
+                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                        class="fill-white"></path>
+                </svg>
+            </div>
+
+            <div class="w-full flex flex-col gap-5 justify-between">
+                <h2 class="text-3xl font-semibold w-full lg:w-3/4 md:w-3/4 sm:w-3/4">Revitalizando Sua Piscina:
+                    Dicas de Especialistas para Reparar Vazamentos e Mais</h2>
+                <p class="w-full lg:w-3/4 md:w-3/4 sm:w-3/4 text-justify">
+                    Não há necessidade de drenar ou fechar sua piscina. Nossa equipe de especialistas está aqui para
+                    ajudar você a voltar a aproveitar o sol e a diversão na água com nossos serviços rápidos e
+                    confiáveis de reparo de piscinas.
+                    <br /><br />
+                    Clique abaixo para agendar sua consulta hoje mesmo!
+                </p>
+
+                <button
+                    class="bg-green-500 py-7 w-full lg:w-3/4 md:w-3/4 sm:w-3/4 text-lg hover:bg-green-600 lg:animate-shake hover:animation-pause md:animate-shake sm:animate-shake inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50">
+                    Envie-nos uma mensagem
+                </button>
+            </div>
+
+            <div id="video" onclick="video()"
+                class="w-fit h-48 lg:w-full lg:h-full md:w-full aspect-video relative rounded-2xl overflow-hidden cursor-pointer shadow-custom">
+                <div class="w-full h-full relative flex items-center justify-center z-[1] bg-white/30">
+                    <div class="py-2 px-5 rounded-xl bg-[#FF0000] flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-play">
+                            <polygon points="6 3 20 12 6 21 6 3"></polygon>
+                        </svg>
+                    </div>
+                </div>
+
+                <img src="./images/Gunite-pool-repair-products-iStock-1296170978.jpg" alt="Youtube Video"
+                    title="click para dar play no video"
+                    class="w-full aspect-video object-cover absolute top-0 left-0" />
+            </div>
+
+            <div class="w-full absolute top-0 left-0 overflow-hidden">
+                <svg class="relative block w-[calc(147%+1.3px)] h-[57px]" data-name="Layer 1"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path
+                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                        class="fill-white"></path>
+                </svg>
+            </div>
+        </div>
+
+        <div id="services" class="py-10 flex flex-col gap-10 px-10 lg:px-32 2xl:px-96 lg:py-24 relative">
+            <div class="flex flex-col gap-1">
+                <h3 class="text-3xl font-bold text-center">Descubra nossas Soluções Completas de Cuidado com a
+                    Piscina: Serviços de Manutenção, Reparo e Restauração de Especialistas</h3>
+                <p class="text-xl text-justify lg:text-center md:text-center sm:text-center">
+                    Serviços de Piscina: Oferecemos soluções completas para piscinas, incluindo construção, manutenção,
+                    renovação, instalação de acessórios, consultoria de design e tratamentos especializados para
+                    garantir que
+                    sua piscina permaneça em ótimas condições e atenda às suas necessidades estéticas e funcionais.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 gap-5 gap-y-12">
+
+                <div id="repair"
+                    class="flex flex-col relative rounded-2xl shadow-custom hover:scale-105 transition-transform bg-white">
+                    <div class="w-full h-full rounded-2xl max-h-52 min-h-52 overflow-hidden flex items-center relative">
+                        <img src="./images/etienne-girardet-Xh6BpT-1tXo-unsplash.jpg" alt="Pool Repair Services"
+                            title="Pool Repair Services" class="w-full h-full object-cover object-right" />
+
+                        <div class="absolute w-full h-1/2 bg-white bottom-0 clip-path flex justify-center"></div>
+
+                        <div class="absolute w-full h-full bottom-0 flex justify-center items-center">
+                            <div class="w-24 rounded-full overflow-hidden blue-shadow-left">
+                                <img src="./images/vector-icon-pool-maintenance-260nw-1179171301.webp" alt="repair icon"
+                                    title="repair icon" class="" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-full flex flex-col text-center p-5">
+                        <h3 class="text-2xl font-semibold">Serviços de Reparo de Piscinas</h3>
+                        <p class="text-xl min-h-44 text-justify ">
+                            Reparo especializado de piscinas para canos vazando, bombas defeituosas e mais.
+                            Faça sua piscina funcionar perfeitamente com nossos serviços de primeira linha.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="cleaning"
+                    class="flex flex-col relative rounded-2xl shadow-custom hover:scale-105 transition-transform bg-white">
+                    <div class="w-full h-full rounded-2xl max-h-52 min-h-52 overflow-hidden flex items-center relative">
+                        <img src="./images/aftab-chandsha-cC7Ko9jr3aY-unsplash.jpg" alt="Pool Cleaning Services"
+                            title="Pool Cleaning Services" class="w-full h-full object-cover object-left" />
+
+                        <div class="absolute w-full h-1/2 bg-white bottom-0 clip-path flex justify-center"></div>
+
+                        <div class="absolute w-full h-full bottom-0 flex justify-center items-center">
+                            <div class="w-24 rounded-full overflow-hidden blue-shadow-center bg-white p-3">
+                                <img src="./images/cleaning-swimming-pool-014-512.webp" alt="Pool Cleaning Icon"
+                                    title="Pool Cleaning Icon" class="" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-full flex flex-col text-center p-5">
+                        <h3 class="text-2xl font-semibold">Serviços de Limpeza de Piscinas</h3>
+                        <p class="text-xl min-h-44 text-justify">
+                            Nossos limpadores de piscina profissionais usam produtos ecológicos para deixar sua piscina
+                            brilhando como nova.
+                            Limpezas regulares mantêm a água da sua piscina segura e agradável.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="pump"
+                    class="flex flex-col relative rounded-2xl shadow-custom hover:scale-105 transition-transform bg-white">
+                    <div class="w-full h-full rounded-2xl max-h-52 min-h-52 overflow-hidden flex items-center relative">
+                        <img src="./images/6101733a146c9.image.jpg" alt="Pump Replacement & Installation"
+                            title="Pump Replacement & Installation" class="w-full h-full object-cover" />
+
+                        <div class="absolute w-full h-1/2 bg-white bottom-0 clip-path flex justify-center"></div>
+
+                        <div class="absolute w-full h-full bottom-0 flex justify-center items-center">
+                            <div class="w-24 rounded-full overflow-hidden blue-shadow-right bg-white p-4">
+                                <img src="./images/pool-pump-icon-outline-repair-service-vector.jpg"
+                                    alt="Pool Cleaning Icon" title="Pool Cleaning Icon" class="" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-full flex flex-col text-center p-5">
+                        <h3 class="text-2xl font-semibold">Substituição e Instalação de Bombas</h3>
+                        <p class="text-xl min-h-44 text-justify">
+                            Não deixe uma bomba defeituosa arruinar sua festa na piscina!
+                            Oferecemos serviços rápidos de substituição e instalação para todos os tipos de bombas
+                        </p>
+                    </div>
+                </div>
+
+                <div id="safety"
+                    class="flex flex-col relative rounded-2xl shadow-custom hover:scale-105 transition-transform bg-white">
+                    <div class="w-full h-full rounded-2xl max-h-52 min-h-52 overflow-hidden flex items-center relative">
+                        <img src="./images/swimming-pool-safety-fence-naples-scaled.jpg"
+                            alt="Pool Fencing and Safety Solutions" title="Pool Fencing and Safety Solutions"
+                            class="w-full h-full object-cover" />
+
+                        <div class="absolute w-full h-1/2 bg-white bottom-0 clip-path flex justify-center"></div>
+
+                        <div class="absolute w-full h-full bottom-0 flex justify-center items-center">
+                            <div class="w-24 rounded-full overflow-hidden blue-shadow-left bg-white p-3">
+                                <img src="./images/113779.png" alt="Pool Fencing and Safety Solutions Icon"
+                                    title="Pool Fencing and Safety Solutions Icon" class="" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-full flex flex-col text-center h-fit p-5">
+                        <h3 class="text-2xl font-semibold">Cercamento e Soluções de Segurança para Piscina</h3>
+                        <p class="text-xl min-h-44 text-justify">
+                            Garanta a segurança de seus entes queridos ao redor de sua piscina com nossos serviços de
+                            cercamento e soluções de segurança.
+                            De coberturas removíveis a portões auto-travantes, temos tudo o que você precisa.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="tile"
+                    class="flex flex-col relative rounded-2xl shadow-custom hover:scale-105 transition-transform bg-white">
+                    <div class="w-full h-full max-h-52 min-h-52 rounded-2xl overflow-hidden flex items-center relative">
+                        <img src="./images/wk5gxypwct661.webp" alt="Tile and Plaster Repair"
+                            title="Tile and Plaster Repair" class="w-full h-full object-cover" />
+
+                        <div class="absolute w-full h-1/2 bg-white bottom-0 clip-path flex justify-center"></div>
+
+                        <div class="absolute w-full h-full bottom-0 flex justify-center items-center">
+                            <div class="w-24 rounded-full overflow-hidden blue-shadow-center bg-white p-3">
+                                <img src="./images/248206.png" alt="Tile and Plaster Repair Icon"
+                                    title="Tile and Plaster Repair Icon" class="" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-full flex flex-col text-center p-5">
+                        <h3 class="text-2xl font-semibold">Reparo de Azulejos e Revestimento</h3>
+                        <p class="text-xl min-h-44 text-justify">
+                            Não deixe rachaduras e manchas arruinarem a aparência estética da sua piscina!
+                            Nossos técnicos especialistas podem reparar e restaurar as superfícies de azulejo e
+                            revestimento à sua antiga glória.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="algae"
+                    class="flex flex-col relative rounded-2xl shadow-custom hover:scale-105 transition-transform bg-white">
+                    <div class="w-full h-full rounded-2xl max-h-52 min-h-52 overflow-hidden flex items-center relative">
+                        <img src="./images/What-Naturally-Kills-Algae-in-Pools.jpg" alt="Algae Control and Prevention"
+                            title="Algae Control and Prevention" class="w-full h-full object-cover" />
+
+                        <div class="absolute w-full h-1/2 bg-white bottom-0 clip-path flex justify-center"></div>
+
+                        <div class="absolute w-full h-full bottom-0 flex justify-center items-center">
+                            <div class="w-24 rounded-full overflow-hidden blue-shadow-right bg-white p-5">
+                                <img src="./images/5830085.png" alt="Algae Control and Prevention Icon"
+                                    title="Algae Control and Prevention Icon" class="" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-full flex flex-col text-center h-fit p-5">
+                        <h3 class="text-2xl font-semibold">Controle e Prevenção de Algas</h3>
+                        <p class="text-xl min-h-44 text-justify">
+                            Diga adeus às piscinas verdes com nossos serviços de controle e prevenção de algas.
+                            Iremos identificar e tratar qualquer crescimento de algas, e fornecer dicas sobre como
+                            prevenir seu retorno.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="waves" class="">
+            <div class="w-full overflow-hidden rotate-180">
+                <svg class="block w-[calc(147%+1.3px)] h-[57px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path
+                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                        class="fill-blue-500"></path>
+                </svg>
+            </div>
+
+            <div class="flex gap-5 bg-blue-500 w-full justify-center items-center p-5">
+                <span class="text-xl lg:text-3xl font-semibold text-white">Tem um projeto com o qual podemos
+                    ajudar?</span>
+                <button
+                    class="bg-green-500 hover:bg-green-600 p-5 text-white lg:mr-0 shadow-md inline-flex items-center justify-center whitespace-nowrap rounded-md text-lg font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50">
+                    Entre em Contato
+                </button>
+            </div>
+
+            <div class="w-full overflow-hidden">
+                <svg class="block w-[calc(147%+1.3px)] h-[57px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path
+                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                        class="fill-blue-500"></path>
+                </svg>
+            </div>
+        </div>
+
+        <div id="reviews" class="px-10 lg:px-32 2xl:px-96 flex flex-col gap-12 lg:py-24 relative">
+            <div class="flex flex-col gap-1">
+                <h3 class="text-3xl font-bold text-center">Nossa experiência com piscinas gera boas avaliações dos
+                    clientes</h3>
+                <p class="text-xl text-justify lg:text-center md:text-center sm:text-center">
+                    Nossos clientes elogiam consistentemente nossos serviços de piscina, destacando nossa qualidade,
+                    profissionalismo e atenção aos detalhes.
+                    Eles apreciam nossa experiência em construção, manutenção, renovação, consultoria de design e
+                    instalação de equipamentos.
+                    O feedback positivo sobre nossos tratamentos especializados ressalta nosso compromisso em superar as
+                    expectativas e fornecer soluções excepcionais para piscinas.
+                </p>
+            </div>
+
+            <div class="flex gap-5 w-full overflow-x-hidden rounded-3xl relative ">
+                <div class="flex gap-5 animate-scroll hover:animation-pause py-5 text-center">
+
+                    <div class="min-w-80 flex flex-col items-center gap-3">
+                        <span class="text-xl font-semibold">Thiago Lacerda</span>
+
+                        <div class="flex gap-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-star fill-blue-500 text-blue-500">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-star fill-blue-500 text-blue-500">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-star fill-blue-500 text-blue-500">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-star fill-blue-500 text-blue-500">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-star fill-blue-500 text-blue-500">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                        </div>
+
+                        <div class="grid grid-cols-[25px,1fr,25px] gap-2 text-justify">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-quote rotate-180 text-blue-500">
+                                <path
+                                    d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z">
+                                </path>
+                                <path
+                                    d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z">
+                                </path>
+                            </svg>
+
+                            <p>
+                                Eles consertaram o vazamento da minha piscina em tempo recorde e a deixaram brilhando
+                                como nova!
+                                O técnico foi profissional, cortês e explicou tudo claramente.
+                                Estou tão impressionado com o serviço que já os recomendei a todos os meus vizinhos.
+                            </p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-quote text-blue-500 self-end">
+                                <path
+                                    d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z">
+                                </path>
+                                <path
+                                    d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="min-w-80 flex flex-col items-center gap-3">
+                        <span class="text-xl font-semibold">Isadora Nogueira</span>
+
+                        <div class="flex gap-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-star fill-blue-500 text-blue-500">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-star fill-blue-500 text-blue-500">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-star fill-blue-500 text-blue-500">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-star fill-blue-500 text-blue-500">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-star fill-blue-500 text-blue-500">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                        </div>
+
+                        <div class="grid grid-cols-[25px,1fr,25px] gap-2 text-justify">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-quote rotate-180 text-blue-500">
+                                <path
+                                    d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z">
+                                </path>
+                                <path
+                                    d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z">
+                                </path>
+                            </svg>
+
+                            <p>
+                                Como uma mãe ocupada de dois filhos, eu não tinha tempo para lidar com o cano vazando da
+                                minha piscina.
+                                Mas a equipe foi rápida, eficiente e profissional.
+                                O técnico foi adorável e explicou tudo claramente.
+                            </p>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-quote text-blue-500 self-end">
+                                <path
+                                    d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z">
+                                </path>
+                                <path
+                                    d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="min-w-80 flex flex-col items-center gap-3">
+                        <span class="text-xl font-semibold">Vinícius Lombardi</span>
+
+                        <div class="flex gap-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-star fill-blue-500 text-blue-500">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-star fill-blue-500 text-blue-500">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-star fill-blue-500 text-blue-500">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-star fill-blue-500 text-blue-500">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-star fill-blue-500 text-blue-500">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                        </div>
+
+                        <div class="grid grid-cols-[25px,1fr,25px] gap-2 text-justify">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-quote rotate-180 text-blue-500">
+                                <path
+                                    d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z">
+                                </path>
+                                <path
+                                    d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z">
+                                </path>
+                            </svg>
+
+                            <p>
+                                Fiquei impressionado com o profissionalismo e a expertise da sua equipe!
+                                Minha piscina estava vazando há meses, mas após a inspeção e reparo deles, agora está
+                                cristalina e brilhando como nova.
+                                Recomendo altamente este serviço a todos.
+                            </p>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-quote text-blue-500 self-end">
+                                <path
+                                    d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z">
+                                </path>
+                                <path
+                                    d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="min-w-80 flex flex-col items-center gap-3">
+                        <span class="text-xl font-semibold">Heitor Monteiro</span>
+
+                        <div class="flex gap-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-star fill-blue-500 text-blue-500">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-star fill-blue-500 text-blue-500">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-star fill-blue-500 text-blue-500">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-star fill-blue-500 text-blue-500">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-star fill-blue-500 text-blue-500">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                        </div>
+
+                        <div class="grid grid-cols-[25px,1fr,25px] gap-2 text-justify">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-quote rotate-180 text-blue-500">
+                                <path
+                                    d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z">
+                                </path>
+                                <path
+                                    d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z">
+                                </path>
+                            </svg>
+
+                            <p>
+                                Sua equipe identificou rapidamente o problema e o consertou para mim.
+                                Eles se deram ao trabalho de explicar o que estava errado de uma forma que fez sentido.
+                                Preços razoáveis também! Estou feliz por ter minha piscina de volta ao normal e
+                                recomendarei seu serviço.
+                            </p>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-quote text-blue-500 self-end">
+                                <path
+                                    d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z">
+                                </path>
+                                <path
+                                    d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="min-w-80 flex flex-col items-center gap-3">
+                        <span class="text-xl font-semibold">Ícaro Almeida</span>
+
+                        <div class="flex gap-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-star fill-blue-500 text-blue-500">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-star fill-blue-500 text-blue-500">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-star fill-blue-500 text-blue-500">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-star fill-blue-500 text-blue-500">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-star fill-blue-500 text-blue-500">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                        </div>
+
+                        <div class="grid grid-cols-[25px,1fr,25px] gap-2 text-justify">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-quote rotate-180 text-blue-500">
+                                <path
+                                    d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z">
+                                </path>
+                                <path
+                                    d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z">
+                                </path>
+                            </svg>
+
+                            <p>
+                                Sou um profissional ocupado e não tenho tempo para lidar com problemas de piscina.
+                                Felizmente, sua equipe foi rápida, profissional e fez minha piscina funcionar
+                                perfeitamente em pouco tempo!
+                                Fiquei impressionado com a atenção aos detalhes e a disposição para responder a todas as
+                                minhas perguntas.
+                            </p>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-quote text-blue-500 self-end">
+                                <path
+                                    d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z">
+                                </path>
+                                <path
+                                    d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="min-w-80 flex flex-col items-center gap-3">
+                        <span class="text-xl font-semibold">Caio Bittencourt</span>
+
+                        <div class="flex gap-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-star fill-blue-500 text-blue-500">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-star fill-blue-500 text-blue-500">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-star fill-blue-500 text-blue-500">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-star fill-blue-500 text-blue-500">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-star fill-blue-500 text-blue-500">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                        </div>
+
+                        <div class="grid grid-cols-[25px,1fr,25px] gap-2 text-justify">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-quote rotate-180 text-blue-500">
+                                <path
+                                    d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z">
+                                </path>
+                                <path
+                                    d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z">
+                                </path>
+                            </svg>
+
+                            <p>
+                                Tive alguns problemas com a bomba da minha piscina ao longo dos anos, mas este serviço
+                                realmente foi além para consertá-la.
+                                O técnico identificou o problema rapidamente e o reparou em pouco tempo. O preço também
+                                foi muito razoável!
+                            </p>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-quote text-blue-500 self-end">
+                                <path
+                                    d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z">
+                                </path>
+                                <path
+                                    d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="faqs" class="flex flex-col gap-5 px-10 lg:px-32 2xl:px-96 py-20">
+            <h3 class="text-3xl font-bold text-center">Perguntas Frequentes sobre Reparos de Piscinas</h3>
+
+            <div class="flex w-full h-fit">
+                <ul uk-accordion class="w-full h-full">
+                    <li class="rounded-xl p-5">
+                        <a class="text-2xl text-start uk-accordion-title">
+                            <span>Quais áreas vocês atendem?</span>
+                            <span class="uk-accordion-icon" uk-icon="icon: chevron-down; ratio: 0.8"></span>
+                        </a>
+                        <div class="text-xl uk-accordion-content">
+                            Servimos toda a região de [Cidade/Região], incluindo [lista de bairros ou cidades
+                            específicos].
+                            Se você não tem certeza se atendemos sua localidade, sinta-se à vontade para entrar em
+                            contato conosco!
+                        </div>
+                    </li>
+
+                    <li value="faq-2" class=" rounded-xl p-5">
+                        <a class="text-2xl text-start uk-accordion-title">
+                            <span>Preciso de um agendamento para o reparo da piscina?</span>
+                            <span class="uk-accordion-icon" uk-icon="icon: chevron-down; ratio: 0.8"></span>
+                        </a>
+                        <div class="text-xl uk-accordion-content">
+                            Não! Você não precisa marcar uma consulta para agendar um serviço de reparo de piscina.
+                            Apenas nos ligue ou preencha o formulário online, e enviaremos alguém o mais rápido
+                            possível.
+                        </div>
+                    </li>
+
+                    <li value="faq-3" class=" rounded-xl p-5">
+                        <a class="text-2xl text-start uk-accordion-title">
+                            <span>Quais formas de pagamento vocês aceitam?</span>
+                            <span class="uk-accordion-icon" uk-icon="icon: chevron-down; ratio: 0.8"></span>
+                        </a>
+                        <div class="text-xl uk-accordion-content">
+                            Aceitamos todos os principais cartões de crédito (Visa, Mastercard, Amex), cheques e
+                            dinheiro.
+                            Se tiver alguma dúvida sobre nossas opções de pagamento, fique à vontade para perguntar!
+                        </div>
+                    </li>
+
+                    <li value="faq-4" class=" rounded-xl p-5">
+                        <a class="text-2xl text-start uk-accordion-title">
+                            <span>Os técnicos são licenciados e segurados?</span>
+                            <span class="uk-accordion-icon" uk-icon="icon: chevron-down; ratio: 0.8"></span>
+                        </a>
+                        <div class="text-xl uk-accordion-content">
+                            Com certeza! Nossos técnicos são totalmente licenciados, garantidos e segurados.
+                            Você pode confiar que eles farão o trabalho corretamente – e com segurança!
+                        </div>
+                    </li>
+
+                    <li value="faq-5" class=" rounded-xl p-5">
+                        <a class="text-2xl text-start uk-accordion-title">
+                            <span>Quanto tempo levará para consertar minha piscina?</span>
+                            <span class="uk-accordion-icon" uk-icon="icon: chevron-down; ratio: 0.8"></span>
+                        </a>
+                        <div class="text-xl uk-accordion-content">
+                            O tempo necessário depende do problema específico com sua piscina.
+                            Nossos técnicos fornecerão uma estimativa detalhada do tempo necessário para o reparo quando
+                            chegarem.
+                            Trabalharemos de forma eficiente para que sua piscina volte a funcionar o mais rápido
+                            possível!
+                        </div>
+                    </li>
+
+                    <li value="faq-6" class=" rounded-xl p-5">
+                        <a class="text-2xl text-start uk-accordion-title">
+                            <span>Vocês oferecem serviços de manutenção preventiva?</span>
+                            <span class="uk-accordion-icon" uk-icon="icon: chevron-down; ratio: 0.8"></span>
+                        </a>
+                        <div class="text-xl uk-accordion-content">
+                            Sim! Nossa equipe oferece serviços de manutenção regular projetados para ajudar a prevenir
+                            problemas comuns com sua piscina.
+                            Entre em contato conosco para mais informações sobre nossos pacotes de manutenção e agende
+                            uma visita hoje mesmo!
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="hidden w-full lg:flex  items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-message-circle-question size-64 drop-shadow-custom">
+                        <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
+                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                        <path d="M12 17h.01"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full relative bg-blue-500">
+            <div class="w-full overflow-hidden">
+                <svg class="block w-[calc(147%+1.3px)] h-[57px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path
+                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                        class="fill-white"></path>
+                </svg>
+            </div>
+
+            <div class="w-full overflow-hidden rotate-180">
+                <svg class="block w-[calc(147%+1.3px)] h-[57px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path
+                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                        class="fill-white"></path>
+                </svg>
+            </div>
+        </div>
+
+        <div class="flex flex-col gap-5 px-10 lg:px-32 2xl:px-96 py-20 relative">
+            <div>
+                <h3 class="text-3xl font-bold text-center">Últimas Tendências em Piscinas, Dicas de Manutenção e
+                    Notícias de Reparo</h3>
+                <p class="text-xl text-justify lg:text-center md:text-center sm:text-center">
+                    Mantenha-se atualizado com as informações mais recentes sobre manutenção de piscinas, técnicas
+                    inovadoras de reparo e as últimas tendências em construção e renovação de piscinas.
+                    Nossas dicas de especialistas e artigos de notícias ajudam você a manter sua piscina em ótimas
+                    condições.
+                    Mergulhe no mundo do design e manutenção de piscinas com nossas atualizações abrangentes e conselhos
+                    práticos.
+                </p>
+            </div>
+
+            <div id="news" class="flex flex-col gap-5 lg:gap-2">
+                <div class="w-full h-fit flex justify-center items-center gap-10">
+                    <span class="text-2xl font-bold">Carregando Notícias</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-loader-circle size-14 animate-spin">
+                        <path d="M21 12a9 9 0 1 1-6.219-8.56"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <footer id="contact" class=" px-10 lg:px-32 2xl:px-96 flex flex-col gap-10 lg:pt-24 py-24 relative bg-blue-500">
+            <div class="w-full overflow-hidden top-0 left-0 absolute">
+                <svg class="block w-[calc(147%+1.3px)] h-[57px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path
+                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                        class="fill-white"></path>
+                </svg>
+            </div>
+
+            <div class="w-full hidden lg:grid grid-cols-3 gap-12">
+                <div class="flex flex-col gap-5 text-white">
+                    <a href="#banner">
+                        <img src="./images/Logo_Pool_Repair.png" alt="Logo Pool Repair" title="Logo Pool Repair"
+                            class="w-32" />
+                    </a>
+
+                    <div class="flex flex-col gap-5 ">
+                        <div class="flex gap-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-map-pin min-w-max">
+                                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span class="text-nowrap">São Paulo, SP</span>
+                        </div>
+
+                        <div class="flex gap-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-phone">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                </path>
+                            </svg>
+                            <span class="min-w-max">(11) 98765-4321</span>
+                        </div>
+
+                        <div class="flex gap-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-mail">
+                                <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                            </svg>
+                            <span class="min-w-max">email@email.com</span>
+                        </div>
+                    </div>
+
+                    <div class="flex w-fit h-fit gap-5">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                            class="bg-white size-8 rounded-full text-black p-1 hover:bg-transparent hover:text-white transition-colors cursor-pointer"
+                            height="24" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z">
+                            </path>
+                        </svg>
+
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512"
+                            class="bg-white size-8 rounded-full text-black p-1 hover:bg-transparent hover:text-white transition-colors cursor-pointer"
+                            height="24" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+                            </path>
+                        </svg>
+
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                            class="bg-white size-8 rounded-full text-black p-1 hover:bg-transparent hover:text-white transition-colors cursor-pointer"
+                            height="24" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="hidden lg:flex flex-col text-white">
+                    <h5 class="text-2xl font-bold">Mapa do Site</h5>
+
+                    <ul class="">
+                        <li class="hover:py-1 hover:text-lg hover:font-semibold transition-all"><a
+                                href="#about-us">Sobre Nós</a></li>
+                        <li class="">
+                            <span class="hover:py-1 hover:text-lg hover:font-semibold transition-all"><a
+                                    href="#services">Serviços</a></span>
+                            <ul class="">
+                                <li class="hover:py-1 hover:text-lg hover:font-semibold transition-all"><a
+                                        href="#repair">- Serviços de Reparo de Piscinas</a></li>
+                                <li class="hover:py-1 hover:text-lg hover:font-semibold transition-all"><a
+                                        href="#cleaning">- Serviços de Limpeza de Piscinas</a></li>
+                                <li class="hover:py-1 hover:text-lg hover:font-semibold transition-all"><a
+                                        href="#pump">- Substituição e Instalação de Bombas</a></li>
+                                <li class="hover:py-1 hover:text-lg hover:font-semibold transition-all"><a
+                                        href="#safety">- Cercamento e Soluções de Segurança para Piscinas</a></li>
+                                <li class="hover:py-1 hover:text-lg hover:font-semibold transition-all"><a
+                                        href="#tile">- Reparo de Azulejos e Revestimento</a></li>
+                                <li class="hover:py-1 hover:text-lg hover:font-semibold transition-all"><a
+                                        href="#algae">- Controle e Prevenção de Algas</a></li>
+                            </ul>
+                        </li>
+                        <li class="hover:py-1 hover:text-lg hover:font-semibold transition-all"><a
+                                href="#reviews">Avaliações</a></li>
+                        <li class="hover:py-1 hover:text-lg hover:font-semibold transition-all"><a
+                                href="#faqs">Perguntas</a></li>
+                        <li class="hover:py-1 hover:text-lg hover:font-semibold transition-all"><a
+                                href="#contact">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="text-white flex flex-col gap-5">
+                    <span class="text-2xl font-bold">Contact Us to Get Your Quote!</span>
+                    <form class="flex flex-col justify-center items-center">
+                        <div class="space-y-2 w-full">
+                            <label
+                                class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                                for=":rc:-form-item">
+                                Nome
+                            </label>
+                            <input
+                                class="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:outline-none focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 focus-visible:border-blue-500 focus-visible:ring-0 placeholder:text-white"
+                                placeholder="Seu nome" name="name" id=":rc:-form-item"
+                                aria-describedby=":rc:-form-item-description" aria-invalid="false" value="">
+                        </div>
+
+                        <div class="flex gap-2 w-full">
+                            <div class="space-y-2 w-full">
+                                <label
+                                    class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                                    for=":rd:-form-item">
+                                    Telefone
+                                </label>
+                                <input type="number"
+                                    class="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:outline-none focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 focus-visible:border-blue-500 focus-visible:ring-0 placeholder:text-white"
+                                    placeholder="Seu Telefone" name="phone" id=":rd:-form-item"
+                                    aria-describedby=":rd:-form-item-description" aria-invalid="false" value="">
+                            </div>
+                            <div class="space-y-2 w-full">
+                                <label
+                                    class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                                    for=":re:-form-item">
+                                    Email
+                                </label>
+                                <input
+                                    class="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:outline-none focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 focus-visible:border-blue-500 focus-visible:ring-0 placeholder:text-white"
+                                    placeholder="Seu email" name="email" id=":re:-form-item"
+                                    aria-describedby=":re:-form-item-description" aria-invalid="false" value="">
+                            </div>
+                        </div>
+
+                        <div class="space-y-2 w-full flex flex-col pt-3 gap-1">
+                            <label
+                                class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                                for=":rf:-form-item">
+                                Mensagem
+                            </label>
+                            <textarea placeholder="Sua mensagem" name="message"
+                                class="placeholder:text-white min-h-[100px] max-h-[250px] rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:border-blue-500 disabled:cursor-not-allowed disabled:opacity-50"
+                                id=":rf:-form-item" aria-describedby=":rf:-form-item-description" aria-invalid="false">
+                            </textarea>
+                        </div>
+
+                        <button
+                            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border shadow-sm h-9 px-4 py-2 w-full bg-transparent mt-2 hover:bg-blue-500 hover:text-white border-white"
+                            type="submit">
+                            Enviar
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="w-full text-center text-white flex flex-col">
+                <span>© Copyright <b>Pool Revive Experts</b> <span id="date"></span>.</span>
+                <span>Todos os direitos reservados.</span>
+            </div>
+
+        </footer>
+
+    </main>
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>

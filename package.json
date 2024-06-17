@@ -1,0 +1,6 @@
+{
+  "dependencies": { "franken-ui": "^0.0.13", "tailwindcss-animate": "^1.0.7" },
+  "devDependencies": {
+    "tailwindcss": "^3.4.4"
+  }
+}
